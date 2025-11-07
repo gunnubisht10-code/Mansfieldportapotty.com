@@ -6,6 +6,7 @@ import { BUSINESS_INFO, SITE_URL } from '../constants';
 import { allServices } from '../data/services';
 import { serviceAreas } from '../data/cities';
 import { reviews } from '../data/reviews';
+import { IMG_EVENT_ROW, IMG_THREE_BLUE_CONSTRUCTION } from '../data/images';
 import ServiceCard from '../components/ui/ServiceCard';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Button from '../components/ui/Button';
@@ -27,7 +28,7 @@ const HomePage: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": BUSINESS_INFO.name,
-    "image": "https://images.unsplash.com/photo-1582993847303-34676a1469e5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3",
+    "image": IMG_THREE_BLUE_CONSTRUCTION,
     "logo": `${SITE_URL}/#/logo.png`,
     "@id": SITE_URL,
     "url": SITE_URL,
@@ -98,7 +99,7 @@ const HomePage: React.FC = () => {
         title={`Porta Potty Rental in ${BUSINESS_INFO.city}, ${BUSINESS_INFO.state}`}
         description={`Your #1 source for reliable and affordable porta potty rentals in Mansfield, TX. We offer same-day delivery for construction sites, events, and more. Call ${BUSINESS_INFO.phone} today!`}
         path="/"
-        imageUrl="https://images.unsplash.com/photo-1522201948163-54c81c6e9a74?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+        imageUrl={IMG_EVENT_ROW}
       />
       <JsonLd schema={localBusinessSchema} />
 

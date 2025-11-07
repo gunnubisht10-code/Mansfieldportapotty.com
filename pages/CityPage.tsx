@@ -5,6 +5,7 @@ import JsonLd from '../components/seo/JsonLd';
 import { serviceAreas } from '../data/cities';
 import { allServices } from '../data/services';
 import { BUSINESS_INFO, SITE_URL } from '../constants';
+import { IMG_CONSTRUCTION_BLUE } from '../data/images';
 import Button from '../components/ui/Button';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
@@ -48,7 +49,7 @@ const CityPage: React.FC = () => {
       "@type": "City",
       "name": city.name
     },
-    "image": "https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+    "image": IMG_CONSTRUCTION_BLUE
   };
   
   const breadcrumbs = [
@@ -63,7 +64,7 @@ const CityPage: React.FC = () => {
         title={`Porta Potty Rental in ${city.name}, ${city.state}`}
         description={`Reliable and affordable porta potty rentals in ${city.name}, ${city.state}. We serve all neighborhoods and zip codes. Call for fast delivery.`}
         path={`/service-areas/${city.slug}`}
-        imageUrl="https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+        imageUrl={IMG_CONSTRUCTION_BLUE}
       />
       <JsonLd schema={citySchema} />
       <Breadcrumbs crumbs={breadcrumbs} />

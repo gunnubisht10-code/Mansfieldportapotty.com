@@ -2,6 +2,7 @@ import React from 'react';
 import Seo from '../components/seo/Seo';
 import JsonLd from '../components/seo/JsonLd';
 import { BUSINESS_INFO, SITE_URL } from '../constants';
+import { IMG_PUMP_TRUCK } from '../data/images';
 import Button from '../components/ui/Button';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 
@@ -27,7 +28,7 @@ const AboutPage: React.FC = () => {
         title="About Us"
         description={`Learn about ${BUSINESS_INFO.name}, Mansfield's trusted local provider for portable toilet rentals. Our commitment to quality, reliability, and customer service.`}
         path="/about"
-        imageUrl="https://images.unsplash.com/photo-1603739457328-349f439a8449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+        imageUrl={IMG_PUMP_TRUCK}
       />
       <JsonLd schema={aboutPageSchema} />
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'About Us' }]} />
@@ -41,7 +42,7 @@ const AboutPage: React.FC = () => {
 
           <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="https://images.unsplash.com/photo-1603739457328-349f439a8449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lawrence Rental Works service truck" className="rounded-lg shadow-xl" loading="lazy" />
+              <img src={IMG_PUMP_TRUCK} alt="Lawrence Rental Works service truck" className="rounded-lg shadow-xl" loading="lazy" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-primary mb-4">Our Story</h2>

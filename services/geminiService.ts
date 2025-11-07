@@ -2,6 +2,8 @@
 // the Gemini API calls here. For this static build, we will use
 // pre-determined placeholder images.
 
+import { IMG_CONSTRUCTION_BLUE } from '../data/images';
+
 // import { GoogleGenAI, Modality } from "@google/genai";
 
 // const API_KEY = process.env.API_KEY;
@@ -41,10 +43,10 @@ export const generateImage = async (prompt: string): Promise<string> => {
     throw new Error("No image generated");
   } catch (error) {
     console.error("Error generating image:", error);
-    return 'https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3'; // Fallback to a real image on error
+    return IMG_CONSTRUCTION_BLUE; // Fallback to a local base64 image on error
   }
   */
 
-  // Using a real image provided by the user instead of a placeholder.
-  return 'https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3';
+  // Using a local, base64-encoded image provided by the user instead of an external link.
+  return IMG_CONSTRUCTION_BLUE;
 };
