@@ -28,6 +28,29 @@ const ServicesHubPage: React.FC = () => {
     }
   };
 
+  const serviceSchemas = allServices.map(service => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.name,
+    "description": service.longDescription,
+    "serviceType": service.name,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": BUSINESS_INFO.name,
+      "url": SITE_URL,
+      "address": BUSINESS_INFO.fullAddress,
+      "telephone": BUSINESS_INFO.phone
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": BUSINESS_INFO.city
+    },
+    "url": `${SITE_URL}/#/services/${service.slug}`,
+    "image": service.image,
+  }));
+
+  const allSchemas = [servicesPageSchema, ...serviceSchemas];
+
   return (
     <>
       <Seo
@@ -35,7 +58,7 @@ const ServicesHubPage: React.FC = () => {
         description={`Explore all portable sanitation services offered by ${BUSINESS_INFO.name} in Mansfield, TX. From standard porta potties to luxury restroom trailers, we have a solution for you.`}
         path="/services"
       />
-      <JsonLd schema={servicesPageSchema} />
+      <JsonLd schema={allSchemas} />
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Services' }]} />
 
       <div className="bg-light py-12 md:py-20">
