@@ -1,11 +1,39 @@
-
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BUSINESS_INFO } from '../../constants';
 import { IMG_LOGO } from '../../data/images';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  // Focus management and Escape key handling for accessibility
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      // Focus the first item in the menu
+      const firstFocusableElement = mobileMenuRef.current?.querySelector('a');
+      firstFocusableElement?.focus();
+      
+      // Add escape key listener
+      document.addEventListener('keydown', handleKeyDown);
+    } else {
+      // Return focus to the menu button when the menu closes
+      menuButtonRef.current?.focus();
+    }
+
+    // Cleanup listener on component unmount or when isOpen changes
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -46,11 +74,13 @@ const Header: React.FC = () => {
           </nav>
           <div className="-mr-2 flex md:hidden">
             <button
+              ref={menuButtonRef}
               onClick={() => setIsOpen(!isOpen)}
               type="button"
               className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               aria-controls="mobile-menu"
-              aria-expanded="false"
+              aria-expanded={isOpen}
+              aria-haspopup="true"
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
@@ -67,7 +97,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden" id="mobile-menu">
+        <div className="md:hidden" id="mobile-menu" ref={mobileMenuRef}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <NavLink
