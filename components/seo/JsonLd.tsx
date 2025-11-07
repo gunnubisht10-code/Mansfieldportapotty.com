@@ -6,23 +6,14 @@ interface JsonLdProps {
 
 const JsonLd: React.FC<JsonLdProps> = ({ schema }) => {
   useEffect(() => {
-    const scriptId = 'json-ld-schema';
-    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
-
-    if (!script) {
-      script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      document.head.appendChild(script);
-    }
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
     script.innerHTML = JSON.stringify(schema, null, 2);
+    document.head.appendChild(script);
 
     return () => {
-      // On component unmount, remove the script
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) {
-        document.head.removeChild(scriptToRemove);
-      }
+      // On component unmount, remove the specific script that was added
+      document.head.removeChild(script);
     };
   }, [schema]);
 
