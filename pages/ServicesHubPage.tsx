@@ -1,10 +1,33 @@
 import React from 'react';
 import Seo from '../components/seo/Seo';
+import JsonLd from '../components/seo/JsonLd';
 import { allServices } from '../data/services';
 import ServiceCard from '../components/ui/ServiceCard';
-import { BUSINESS_INFO } from '../constants';
+import { BUSINESS_INFO, SITE_URL } from '../constants';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const ServicesHubPage: React.FC = () => {
+    
+  const servicesPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": `${SITE_URL}/#/services`,
+    "name": "Our Porta Potty Rental Services",
+    "description": `All portable sanitation services offered by ${BUSINESS_INFO.name}`,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": allServices.map((service, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Service",
+          "name": service.name,
+          "url": `${SITE_URL}/#/services/${service.slug}`
+        }
+      }))
+    }
+  };
+
   return (
     <>
       <Seo
@@ -12,6 +35,9 @@ const ServicesHubPage: React.FC = () => {
         description={`Explore all portable sanitation services offered by ${BUSINESS_INFO.name} in Mansfield, TX. From standard porta potties to luxury restroom trailers, we have a solution for you.`}
         path="/services"
       />
+      <JsonLd schema={servicesPageSchema} />
+      <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Services' }]} />
+
       <div className="bg-light py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

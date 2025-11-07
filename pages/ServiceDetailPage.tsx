@@ -6,6 +6,7 @@ import { allServices } from '../data/services';
 import { BUSINESS_INFO, SITE_URL } from '../constants';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Button from '../components/ui/Button';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,20 +27,29 @@ const ServiceDetailPage: React.FC = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "name": service.name,
+    "description": service.longDescription,
     "serviceType": service.name,
     "provider": {
       "@type": "LocalBusiness",
-      "name": BUSINESS_INFO.name
+      "name": BUSINESS_INFO.name,
+      "url": SITE_URL,
+      "address": BUSINESS_INFO.fullAddress,
+      "telephone": BUSINESS_INFO.phone
     },
     "areaServed": {
       "@type": "City",
       "name": BUSINESS_INFO.city
     },
-    "name": service.name,
-    "description": service.longDescription,
     "url": `${SITE_URL}/#/services/${service.slug}`,
     "image": service.image,
   };
+  
+  const breadcrumbs = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: service.name }
+  ];
 
   return (
     <>
@@ -50,6 +60,7 @@ const ServiceDetailPage: React.FC = () => {
         imageUrl={service.image}
       />
       <JsonLd schema={serviceSchema} />
+      <Breadcrumbs crumbs={breadcrumbs} />
 
       <div className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

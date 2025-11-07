@@ -1,18 +1,37 @@
-
 import React from 'react';
 import Seo from '../components/seo/Seo';
-import { BUSINESS_INFO } from '../constants';
+import JsonLd from '../components/seo/JsonLd';
+import { BUSINESS_INFO, SITE_URL } from '../constants';
 import Button from '../components/ui/Button';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const AboutPage: React.FC = () => {
+    
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": `${SITE_URL}/#/about`,
+    "name": `About ${BUSINESS_INFO.name}`,
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": BUSINESS_INFO.name,
+      "url": SITE_URL,
+      "telephone": BUSINESS_INFO.phone,
+      "address": BUSINESS_INFO.fullAddress
+    }
+  };
+
   return (
     <>
       <Seo
         title="About Us"
         description={`Learn about ${BUSINESS_INFO.name}, Mansfield's trusted local provider for portable toilet rentals. Our commitment to quality, reliability, and customer service.`}
         path="/about"
-        imageUrl="https://picsum.photos/seed/aboutus/1200/630"
+        imageUrl="https://picsum.photos/seed/porta-potty-company-truck-and-team/1200/630"
       />
+      <JsonLd schema={aboutPageSchema} />
+      <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'About Us' }]} />
+      
       <div className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -22,7 +41,7 @@ const AboutPage: React.FC = () => {
 
           <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="https://picsum.photos/seed/aboutteam/800/600" alt="Lawrence Rental Works team" className="rounded-lg shadow-xl" loading="lazy" />
+              <img src="https://picsum.photos/seed/porta-potty-company-team-photo/800/600" alt="Lawrence Rental Works team" className="rounded-lg shadow-xl" loading="lazy" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-primary mb-4">Our Story</h2>

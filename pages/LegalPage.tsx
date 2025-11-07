@@ -1,6 +1,8 @@
 import React from 'react';
 import Seo from '../components/seo/Seo';
-import { BUSINESS_INFO } from '../constants';
+import JsonLd from '../components/seo/JsonLd';
+import { BUSINESS_INFO, SITE_URL } from '../constants';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 interface LegalPageProps {
   pageType: 'privacy' | 'terms' | 'disclaimer';
@@ -54,6 +56,13 @@ const legalContent = {
 
 const LegalPage: React.FC<LegalPageProps> = ({ pageType }) => {
   const page = legalContent[pageType];
+  
+  const legalPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": `${SITE_URL}/#${page.path}`,
+    "name": page.title
+  };
 
   return (
     <>
@@ -62,6 +71,9 @@ const LegalPage: React.FC<LegalPageProps> = ({ pageType }) => {
         description={page.description}
         path={page.path}
       />
+      <JsonLd schema={legalPageSchema} />
+      <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: page.title }]} />
+      
       <div className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold text-primary text-center">{page.title}</h1>

@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import Seo from '../components/seo/Seo';
-import { BUSINESS_INFO } from '../constants';
+import JsonLd from '../components/seo/JsonLd';
+import { BUSINESS_INFO, SITE_URL } from '../constants';
 import Button from '../components/ui/Button';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -12,6 +13,20 @@ const ContactPage: React.FC = () => {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": `${SITE_URL}/#/contact`,
+    "name": `Contact ${BUSINESS_INFO.name}`,
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": BUSINESS_INFO.name,
+      "url": SITE_URL,
+      "telephone": BUSINESS_INFO.phone,
+      "address": BUSINESS_INFO.fullAddress
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,6 +47,9 @@ const ContactPage: React.FC = () => {
         description={`Get in touch with ${BUSINESS_INFO.name} for a free quote on porta potty rentals in Mansfield, TX. Call us at ${BUSINESS_INFO.phone} or fill out our contact form.`}
         path="/contact"
       />
+      <JsonLd schema={contactPageSchema} />
+      <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Contact' }]} />
+      
       <div className="bg-light py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

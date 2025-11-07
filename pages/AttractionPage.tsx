@@ -4,6 +4,7 @@ import Seo from '../components/seo/Seo';
 import JsonLd from '../components/seo/JsonLd';
 import { localAttractions } from '../data/attractions';
 import { SITE_URL } from '../constants';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
 
 const AttractionPage: React.FC = () => {
   const { attractionSlug } = useParams<{ attractionSlug: string }>();
@@ -31,6 +32,7 @@ const AttractionPage: React.FC = () => {
       "@type": "TouristAttraction",
       "name": attraction.name,
       "description": attraction.description,
+      "image": attraction.image,
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mansfield",
@@ -38,6 +40,12 @@ const AttractionPage: React.FC = () => {
       }
     }
   };
+
+  const breadcrumbs = [
+      { name: 'Home', path: '/' },
+      { name: 'Local Attractions', path: '/local-attractions' },
+      { name: attraction.name }
+  ]
 
   return (
     <>
@@ -48,6 +56,7 @@ const AttractionPage: React.FC = () => {
         imageUrl={attraction.image}
       />
       <JsonLd schema={webpageSchema} />
+      <Breadcrumbs crumbs={breadcrumbs} />
 
       <div className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">

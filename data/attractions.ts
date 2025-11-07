@@ -1,4 +1,3 @@
-
 import type { Attraction } from '../types';
 
 export const localAttractions: Attraction[] = [
@@ -6,35 +5,35 @@ export const localAttractions: Attraction[] = [
     slug: 'hawaiian-falls-mansfield',
     name: 'Hawaiian Falls Mansfield',
     location: 'Mansfield, TX',
-    description: 'A popular family-friendly water park featuring a variety of water slides, a wave pool, a lazy river, and interactive water play areas for children. It\'s a perfect destination to beat the Texas heat during the summer months, offering fun and excitement for all ages.',
-    image: 'https://picsum.photos/seed/hawaiianfalls/800/600',
+    description: 'A sprawling, family-friendly water park that serves as a premier destination to beat the Texas heat. It features a wide variety of attractions, including thrilling water slides like "The Torpedo" and "The Waikiki Wipeout," a large wave pool for catching some swells, a winding lazy river for relaxing floats, and multiple interactive water play areas designed specifically for younger children. With cabana rentals, food concessions, and a fun island theme, it\'s a full day of summer excitement for all ages.',
+    image: 'https://picsum.photos/seed/hawaiian-falls-water-slides/800/600',
   },
   {
     slug: 'elmers-auto-and-toy-museum',
     name: "Elmer's Auto and Toy Museum",
     location: 'Mansfield, TX',
-    description: 'A unique museum showcasing an incredible collection of over 100 antique and classic cars, alongside thousands of antique toys, pedal cars, and dolls. This nostalgic journey through history is a hidden gem in Mansfield, fascinating for both car enthusiasts and families.',
-    image: 'https://picsum.photos/seed/elmermuseum/800/600',
+    description: 'A truly unique and fascinating museum that is a must-see for collectors and history buffs. It showcases an incredible private collection of over 100 meticulously maintained antique and classic cars from various eras. Beyond the automobiles, the museum houses thousands of antique toys, hundreds of pedal cars, and a vast collection of dolls. Taking a tour of Elmer\'s is a nostalgic journey through the 20th century, a hidden gem in Mansfield that captivates both car enthusiasts and families alike.',
+    image: 'https://picsum.photos/seed/classic-red-convertible-car-museum/800/600',
   },
   {
     slug: 'oliver-nature-park',
     name: 'Oliver Nature Park',
     location: 'Mansfield, TX',
-    description: 'An 80-acre nature preserve offering a peaceful escape with its beautiful walking trails, diverse wildlife, and scenic natural landscapes. The park features a captivating treetop trail, a fishing pond, and educational programs, making it ideal for hiking, bird watching, and nature photography.',
-    image: 'https://picsum.photos/seed/oliverpark/800/600',
+    description: 'An 80-acre nature preserve offering a peaceful and beautiful escape into the wild. The park is a sanctuary for local flora and fauna, featuring well-maintained walking trails that wind through forests and past a serene fishing pond. A highlight is the captivating treetop trail that provides a unique perspective of the park\'s ecosystem. It is an ideal location for hiking, bird watching, nature photography, and participating in the various educational programs offered throughout the year.',
+    image: 'https://picsum.photos/seed/wooden-walking-trail-nature-park/800/600',
   },
   {
     slug: 'historic-downtown-mansfield',
     name: 'Historic Downtown Mansfield',
     location: 'Mansfield, TX',
-    description: 'The heart of the city, Historic Downtown Mansfield offers a charming blend of historic architecture, unique boutiques, local restaurants, and vibrant community events. It\'s a great place to stroll, shop, dine, and experience the local culture and history of Mansfield.',
-    image: 'https://picsum.photos/seed/downtownmansfield/800/600',
+    description: 'The vibrant heart of the city, Historic Downtown Mansfield offers a charming blend of beautifully preserved historic architecture and modern energy. Visitors can stroll along the picturesque streets, browse unique local boutiques and antique shops, and dine at a variety of acclaimed local restaurants. The area frequently hosts community events, farmers markets, and concerts at The LOT Downtown, making it a bustling center for culture, history, and entertainment in Mansfield.',
+    image: 'https://picsum.photos/seed/historic-brick-street-downtown/800/600',
   },
   {
     slug: 'fieldhouse-usa-mansfield',
     name: 'Fieldhouse USA Mansfield',
     location: 'Mansfield, TX',
-    description: 'A state-of-the-art indoor sports facility that hosts a wide range of youth and adult sports leagues, tournaments, and camps. With numerous courts for basketball, volleyball, and futsal, it\'s a hub of athletic activity and community sports in the Mansfield area.',
-    image: 'https://picsum.photos/seed/fieldhouseusa/800/600',
+    description: 'A massive, state-of-the-art indoor sports facility that serves as a central hub for athletic activity in the region. It hosts a wide range of youth and adult sports leagues, high-profile tournaments, and specialized camps year-round. With numerous courts designed for basketball, volleyball, and futsal, as well as performance training areas, it provides a top-quality environment for athletes of all ages and skill levels to compete and train.',
+    image: 'https://picsum.photos/seed/indoor-basketball-court-action-shot/800/600',
   }
 ];
