@@ -6,7 +6,7 @@ import { BUSINESS_INFO, SITE_URL } from '../constants';
 import { allServices } from '../data/services';
 import { serviceAreas } from '../data/cities';
 import { reviews } from '../data/reviews';
-import { IMG_EVENT_ROW, IMG_THREE_BLUE_CONSTRUCTION } from '../data/images';
+import { IMG_EVENT_ROW, IMG_THREE_BLUE_CONSTRUCTION, IMG_LOGO } from '../data/images';
 import ServiceCard from '../components/ui/ServiceCard';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Button from '../components/ui/Button';
@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
     "@type": "LocalBusiness",
     "name": BUSINESS_INFO.name,
     "image": IMG_THREE_BLUE_CONSTRUCTION,
-    "logo": `${SITE_URL}/#/logo.png`,
+    "logo": IMG_LOGO,
     "@id": SITE_URL,
     "url": SITE_URL,
     "telephone": BUSINESS_INFO.phone,
