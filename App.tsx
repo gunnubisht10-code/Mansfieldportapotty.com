@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -25,7 +24,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <HashRouter>
+    <>
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -43,7 +42,7 @@ function App() {
           <Route path="/disclaimer" element={<LegalPage pageType="disclaimer" />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </>
   );
 }
 

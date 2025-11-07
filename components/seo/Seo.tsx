@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { SITE_URL, BUSINESS_INFO } from '../../constants';
 
 interface SeoProps {
@@ -16,7 +14,7 @@ const Seo: React.FC<SeoProps> = ({ title, description, path, imageUrl }) => {
   const defaultImage = `${SITE_URL}/og-image.jpg`; // Assume a default OG image exists
 
   return (
-    <Helmet>
+    <>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
@@ -36,7 +34,7 @@ const Seo: React.FC<SeoProps> = ({ title, description, path, imageUrl }) => {
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl || defaultImage} />
-    </Helmet>
+    </>
   );
 };
 

@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface JsonLdProps {
   schema: object;
@@ -8,11 +6,10 @@ interface JsonLdProps {
 
 const JsonLd: React.FC<JsonLdProps> = ({ schema }) => {
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
   );
 };
 
