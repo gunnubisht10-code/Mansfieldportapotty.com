@@ -152,22 +152,22 @@ const HomePage: React.FC = () => {
             <div className="text-center p-4">
                 <h3 className="text-2xl font-bold text-primary mb-2">Standard Porta Potty</h3>
                 <p className="text-gray-600">The essential, cost-effective choice for construction sites and casual events.</p>
-                <Link to="/services/standard-porta-potty" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
+                <Link to="/services/standard-porta-potty-rental" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
             </div>
              <div className="text-center p-4">
-                <h3 className="text-2xl font-bold text-primary mb-2">Deluxe Porta Potty</h3>
-                <p className="text-gray-600">An upgrade with a built-in sink for convenient handwashing.</p>
-                <Link to="/services/deluxe-porta-potty" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
+                <h3 className="text-2xl font-bold text-primary mb-2">Deluxe Flushing Potty</h3>
+                <p className="text-gray-600">An upgrade with a flushing toilet and a built-in sink for convenience.</p>
+                <Link to="/services/deluxe-flushing-porta-potty" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
             </div>
              <div className="text-center p-4">
                 <h3 className="text-2xl font-bold text-primary mb-2">ADA Accessible Porta Potty</h3>
                 <p className="text-gray-600">Spacious, wheelchair-accessible units to ensure inclusivity for all guests.</p>
-                <Link to="/services/ada-accessible-porta-potty" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
+                <Link to="/services/ada-compliant-restrooms" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
             </div>
              <div className="text-center p-4">
-                <h3 className="text-2xl font-bold text-primary mb-2">Restroom Trailer</h3>
+                <h3 className="text-2xl font-bold text-primary mb-2">Luxury Restroom Trailer</h3>
                 <p className="text-gray-600">The ultimate luxury experience with flushing toilets, running water, and A/C.</p>
-                <Link to="/services/restroom-trailer-rental" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
+                <Link to="/services/luxury-restroom-trailer-rental" className="text-accent font-semibold mt-4 inline-block hover:underline">Learn More &rarr;</Link>
             </div>
           </div>
         </div>

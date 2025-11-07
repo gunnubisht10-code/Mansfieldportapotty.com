@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BUSINESS_INFO } from '../../constants';
+import { IMG_LOGO } from '../../data/images';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +27,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-secondary" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 2a5 5 0 00-5 5v1h10V7a5 5 0 00-5-5zM4 11v5a2 2 0 002 2h8a2 2 0 002-2v-5H4z" />
-              </svg>
-              <span className="text-xl font-bold tracking-tight">{BUSINESS_INFO.name}</span>
+              <img src={IMG_LOGO} alt={`${BUSINESS_INFO.name} Logo`} className="h-16 w-auto" />
             </Link>
           </div>
           <nav className="hidden md:block">

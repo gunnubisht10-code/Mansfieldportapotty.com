@@ -1,5 +1,6 @@
 import type { Attraction } from '../types';
-import { IMG_EVENT_ROW, IMG_PARK_GREEN, IMG_SINGLE_GREY } from './images';
+// FIX: Removed unused import 'IMG_SINGLE_GREY' which was causing an error as it is not exported from './images'.
+import { IMG_EVENT_ROW, IMG_PARK_GREEN } from './images';
 
 export const localAttractions: Attraction[] = [
   {

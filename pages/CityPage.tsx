@@ -5,7 +5,8 @@ import JsonLd from '../components/seo/JsonLd';
 import { serviceAreas } from '../data/cities';
 import { allServices } from '../data/services';
 import { BUSINESS_INFO, SITE_URL } from '../constants';
-import { IMG_CONSTRUCTION_BLUE } from '../data/images';
+// FIX: Replaced non-existent 'IMG_CONSTRUCTION_BLUE' with 'IMG_CONSTRUCTION_SITE' as suggested by the error message.
+import { IMG_CONSTRUCTION_SITE } from '../data/images';
 import Button from '../components/ui/Button';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
@@ -49,7 +50,7 @@ const CityPage: React.FC = () => {
       "@type": "City",
       "name": city.name
     },
-    "image": IMG_CONSTRUCTION_BLUE
+    "image": IMG_CONSTRUCTION_SITE
   };
   
   const breadcrumbs = [
@@ -64,7 +65,7 @@ const CityPage: React.FC = () => {
         title={`Porta Potty Rental in ${city.name}, ${city.state}`}
         description={`Reliable and affordable porta potty rentals in ${city.name}, ${city.state}. We serve all neighborhoods and zip codes. Call for fast delivery.`}
         path={`/service-areas/${city.slug}`}
-        imageUrl={IMG_CONSTRUCTION_BLUE}
+        imageUrl={IMG_CONSTRUCTION_SITE}
       />
       <JsonLd schema={citySchema} />
       <Breadcrumbs crumbs={breadcrumbs} />
