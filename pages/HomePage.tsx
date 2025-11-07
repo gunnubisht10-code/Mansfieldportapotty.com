@@ -73,14 +73,14 @@ const HomePage: React.FC = () => {
       "itemOffered": {
         "@type": "Service",
         "name": s.name,
-        "url": `${SITE_URL}/#/services/${s.slug}`,
+        "url": `${SITE_URL}/services/${s.slug}`,
         "description": s.shortDescription
       }
     })),
     "areaServed": serviceAreas.map(c => ({
       "@type": "City",
       "name": c.name,
-      "url": `${SITE_URL}/#/service-areas/${c.slug}`
+      "url": `${SITE_URL}/service-areas/${c.slug}`
     })),
     "sameAs": [
       "https://www.facebook.com/Lawrencerentalworks",

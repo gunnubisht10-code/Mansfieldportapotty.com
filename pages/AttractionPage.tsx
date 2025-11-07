@@ -27,7 +27,7 @@ const AttractionPage: React.FC = () => {
     "@type": "WebPage",
     "name": `${attraction.name} - A Mansfield, TX Attraction`,
     "description": attraction.description,
-    "url": `${SITE_URL}/#/local-attractions/${attraction.slug}`,
+    "url": `${SITE_URL}/local-attractions/${attraction.slug}`,
     "about": {
       "@type": "TouristAttraction",
       "name": attraction.name,

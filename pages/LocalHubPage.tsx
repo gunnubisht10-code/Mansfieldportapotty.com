@@ -11,7 +11,7 @@ const LocalHubPage: React.FC = () => {
   const localHubSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": `${SITE_URL}/#/local-attractions`,
+    "url": `${SITE_URL}/local-attractions`,
     "name": "Local Attractions in Mansfield, TX",
     "description": "Discover top attractions in Mansfield, TX."
   };

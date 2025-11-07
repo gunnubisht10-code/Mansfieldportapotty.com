@@ -11,7 +11,7 @@ const ServicesHubPage: React.FC = () => {
   const servicesPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": `${SITE_URL}/#/services`,
+    "url": `${SITE_URL}/services`,
     "name": "Our Porta Potty Rental Services",
     "description": `All portable sanitation services offered by ${BUSINESS_INFO.name}`,
     "mainEntity": {
@@ -22,7 +22,7 @@ const ServicesHubPage: React.FC = () => {
         "item": {
           "@type": "Service",
           "name": service.name,
-          "url": `${SITE_URL}/#/services/${service.slug}`
+          "url": `${SITE_URL}/services/${service.slug}`
         }
       }))
     }
@@ -45,7 +45,7 @@ const ServicesHubPage: React.FC = () => {
       "@type": "City",
       "name": BUSINESS_INFO.city
     },
-    "url": `${SITE_URL}/#/services/${service.slug}`,
+    "url": `${SITE_URL}/services/${service.slug}`,
     "image": service.image,
   }));
 

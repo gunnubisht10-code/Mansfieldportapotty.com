@@ -20,7 +20,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ crumbs }) => {
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.name,
-      "item": crumb.path ? `${SITE_URL}/#${crumb.path}` : undefined
+      "item": crumb.path ? `${SITE_URL}${crumb.path}` : undefined
     }))
   };
 

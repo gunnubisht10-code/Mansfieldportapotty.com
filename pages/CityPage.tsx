@@ -37,7 +37,7 @@ const CityPage: React.FC = () => {
     "@type": "LocalBusiness",
     "name": `${BUSINESS_INFO.name}`,
     "description": `Your local provider for porta potty rentals in ${city.name}, ${city.state}.`,
-    "url": `${SITE_URL}/#/service-areas/${city.slug}`,
+    "url": `${SITE_URL}/service-areas/${city.slug}`,
     "telephone": BUSINESS_INFO.phone,
     "address": {
       "@type": "PostalAddress",

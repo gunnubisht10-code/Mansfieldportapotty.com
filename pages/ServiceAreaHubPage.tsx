@@ -11,7 +11,7 @@ const ServiceAreaHubPage: React.FC = () => {
   const serviceAreaPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": `${SITE_URL}/#/service-areas`,
+    "url": `${SITE_URL}/service-areas`,
     "name": "Our Service Areas",
     "description": `Porta potty rental service areas for ${BUSINESS_INFO.name}`,
     "mainEntity": {
@@ -22,7 +22,7 @@ const ServiceAreaHubPage: React.FC = () => {
         "item": {
           "@type": "City",
           "name": city.name,
-          "url": `${SITE_URL}/#/service-areas/${city.slug}`
+          "url": `${SITE_URL}/service-areas/${city.slug}`
         }
       }))
     }

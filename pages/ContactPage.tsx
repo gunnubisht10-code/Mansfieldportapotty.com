@@ -17,7 +17,7 @@ const ContactPage: React.FC = () => {
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "url": `${SITE_URL}/#/contact`,
+    "url": `${SITE_URL}/contact`,
     "name": `Contact ${BUSINESS_INFO.name}`,
     "mainEntity": {
       "@type": "LocalBusiness",

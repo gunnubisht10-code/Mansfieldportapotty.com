@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -7,42 +6,152 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/about</loc>
+    <loc>https://www.mansfieldportapotty.com/about</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/contact</loc>
+    <loc>https://www.mansfieldportapotty.com/contact</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/services</loc>
+    <loc>https://www.mansfieldportapotty.com/services</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/service-areas</loc>
+    <loc>https://www.mansfieldportapotty.com/services/standard-porta-potty-rental</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/deluxe-flushing-porta-potty</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/construction-site-porta-potty</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/event-porta-potty-rental</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/ada-compliant-restrooms</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/hand-washing-station-rentals</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/luxury-restroom-trailer-rental</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/high-rise-portable-toilets</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/holding-tank-rentals</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/long-term-porta-potty-rentals</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/emergency-disaster-relief-services</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/wedding-porta-potty-rentals</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/solar-powered-restrooms</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/vip-solar-restroom-trailers</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/services/portable-shower-trailers</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.mansfieldportapotty.com/service-areas</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.90</priority>
   </url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/arlington</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/grand-prairie</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/fort-worth</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/dallas</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/irving</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/plano</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/mckinney</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/frisco</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/euless</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/bedford</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/hurst</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/southlake</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/keller</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/cedar-hill</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/duncanville</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/desoto</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/lancaster</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/midlothian</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/waxahachie</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/burleson</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/crowley</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/kennedale</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/forest-hill</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/richland-hills</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/north-richland-hills</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/haltom-city</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/watauga</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/colleyville</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/grapevine</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/service-areas/trophy-club</loc><lastmod>2023-10-27</lastmod><priority>0.80</priority></url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/local-attractions</loc>
+    <loc>https://www.mansfieldportapotty.com/local-attractions</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.70</priority>
   </url>
+  <url><loc>https://www.mansfieldportapotty.com/local-attractions/hawaiian-falls-mansfield</loc><lastmod>2023-10-27</lastmod><priority>0.60</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/local-attractions/elmers-auto-and-toy-museum</loc><lastmod>2023-10-27</lastmod><priority>0.60</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/local-attractions/oliver-nature-park</loc><lastmod>2023-10-27</lastmod><priority>0.60</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/local-attractions/historic-downtown-mansfield</loc><lastmod>2023-10-27</lastmod><priority>0.60</priority></url>
+  <url><loc>https://www.mansfieldportapotty.com/local-attractions/fieldhouse-usa-mansfield</loc><lastmod>2023-10-27</lastmod><priority>0.60</priority></url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/privacy-policy</loc>
+    <loc>https://www.mansfieldportapotty.com/privacy-policy</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/terms-and-conditions</loc>
+    <loc>https://www.mansfieldportapotty.com/terms-and-conditions</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://www.mansfieldportapotty.com/#/disclaimer</loc>
+    <loc>https://www.mansfieldportapotty.com/disclaimer</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.50</priority>
   </url>

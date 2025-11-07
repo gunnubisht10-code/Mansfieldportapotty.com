@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "url": `${SITE_URL}/#/about`,
+    "url": `${SITE_URL}/about`,
     "name": `About ${BUSINESS_INFO.name}`,
     "mainEntity": {
       "@type": "LocalBusiness",

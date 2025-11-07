@@ -60,7 +60,7 @@ const LegalPage: React.FC<LegalPageProps> = ({ pageType }) => {
   const legalPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": `${SITE_URL}/#${page.path}`,
+    "url": `${SITE_URL}${page.path}`,
     "name": page.title
   };
 

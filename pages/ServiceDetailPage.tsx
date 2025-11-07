@@ -41,7 +41,7 @@ const ServiceDetailPage: React.FC = () => {
       "@type": "City",
       "name": BUSINESS_INFO.city
     },
-    "url": `${SITE_URL}/#/services/${service.slug}`,
+    "url": `${SITE_URL}/services/${service.slug}`,
     "image": service.image,
   };
   

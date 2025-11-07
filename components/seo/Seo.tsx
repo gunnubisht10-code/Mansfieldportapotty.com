@@ -10,7 +10,7 @@ interface SeoProps {
 }
 
 const Seo: React.FC<SeoProps> = ({ title, description, path, imageUrl }) => {
-  const canonicalUrl = `${SITE_URL}/#${path}`;
+  const canonicalUrl = `${SITE_URL}${path}`;
   const fullTitle = `${title} | ${BUSINESS_INFO.name}`;
   const defaultImage = IMG_LOGO_OG; // A default image for social sharing
 
