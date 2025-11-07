@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
         title="About Us"
         description={`Learn about ${BUSINESS_INFO.name}, Mansfield's trusted local provider for portable toilet rentals. Our commitment to quality, reliability, and customer service.`}
         path="/about"
-        imageUrl="https://picsum.photos/seed/porta-potty-company-truck-and-team/1200/630"
+        imageUrl="https://images.unsplash.com/photo-1603739457328-349f439a8449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
       />
       <JsonLd schema={aboutPageSchema} />
       <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'About Us' }]} />
@@ -41,7 +41,7 @@ const AboutPage: React.FC = () => {
 
           <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="https://picsum.photos/seed/porta-potty-company-team-photo/800/600" alt="Lawrence Rental Works team" className="rounded-lg shadow-xl" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1603739457328-349f439a8449?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lawrence Rental Works service truck" className="rounded-lg shadow-xl" loading="lazy" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-primary mb-4">Our Story</h2>
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
                 Founded in Mansfield, Texas, Lawrence Rental Works was built on a simple principle: to provide clean, reliable, and affordable portable sanitation solutions to our community. We saw a need for a local company that prioritized customer service and dependability above all else.
               </p>
               <p className="text-gray-700 mb-4">
-                From our humble beginnings, we've grown to become a leading supplier for construction sites, special events, and municipal needs throughout the Dallas-Fort Worth metroplex. Our commitment to maintaining the highest standards of cleanliness and punctuality has earned us the trust of hundreds of clients.
+                From our humble beginnings, we'vegrown to become a leading supplier for construction sites, special events, and municipal needs throughout the Dallas-Fort Worth metroplex. Our commitment to maintaining the highest standards of cleanliness and punctuality has earned us the trust of hundreds of clients.
               </p>
               <p className="text-gray-700">
                 We're not just a rental company; we're your neighbors. We are proud to be a part of the Mansfield community and are dedicated to supporting its growth and success.

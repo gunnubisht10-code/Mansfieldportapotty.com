@@ -32,3 +32,10 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+
+export interface Review {
+  name: string;
+  location: string;
+  rating: number; // A number from 1 to 5
+  text: string;
+}

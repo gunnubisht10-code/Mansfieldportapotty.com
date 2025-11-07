@@ -1,4 +1,3 @@
-
 // This is a placeholder service. In a real application, you would implement
 // the Gemini API calls here. For this static build, we will use
 // pre-determined placeholder images.
@@ -42,12 +41,10 @@ export const generateImage = async (prompt: string): Promise<string> => {
     throw new Error("No image generated");
   } catch (error) {
     console.error("Error generating image:", error);
-    return 'https://picsum.photos/seed/error/800/600';
+    return 'https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3'; // Fallback to a real image on error
   }
   */
 
-  // For this static app, we return a predictable placeholder from picsum.photos
-  // The 'seed' parameter ensures we get the same image for the same prompt.
-  const seed = prompt.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-  return `https://picsum.photos/seed/${seed}/800/600`;
+  // Using a real image provided by the user instead of a placeholder.
+  return 'https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3';
 };

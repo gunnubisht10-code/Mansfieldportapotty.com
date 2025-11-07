@@ -48,7 +48,7 @@ const CityPage: React.FC = () => {
       "@type": "City",
       "name": city.name
     },
-    "image": `https://picsum.photos/seed/${city.slug}-skyline/800/600`
+    "image": "https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
   };
   
   const breadcrumbs = [
@@ -63,7 +63,7 @@ const CityPage: React.FC = () => {
         title={`Porta Potty Rental in ${city.name}, ${city.state}`}
         description={`Reliable and affordable porta potty rentals in ${city.name}, ${city.state}. We serve all neighborhoods and zip codes. Call for fast delivery.`}
         path={`/service-areas/${city.slug}`}
-        imageUrl={`https://picsum.photos/seed/${city.slug}-skyline-og/1200/630`}
+        imageUrl="https://images.unsplash.com/photo-1621233993952-21a4e84b6f4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
       />
       <JsonLd schema={citySchema} />
       <Breadcrumbs crumbs={breadcrumbs} />

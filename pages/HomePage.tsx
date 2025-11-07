@@ -5,9 +5,11 @@ import JsonLd from '../components/seo/JsonLd';
 import { BUSINESS_INFO, SITE_URL } from '../constants';
 import { allServices } from '../data/services';
 import { serviceAreas } from '../data/cities';
+import { reviews } from '../data/reviews';
 import ServiceCard from '../components/ui/ServiceCard';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import Button from '../components/ui/Button';
+import ReviewsSlider from '../components/ui/ReviewsSlider';
 
 const HomePage: React.FC = () => {
     
@@ -17,12 +19,15 @@ const HomePage: React.FC = () => {
     { question: 'What types of portable toilets can I rent?', answer: 'We offer a wide range, including standard units, deluxe models with sinks, ADA-compliant accessible toilets, and luxury restroom trailers for special events.' },
     { question: 'How do I know how many porta potties I need for my event?', answer: 'Our expert team can help you calculate the right number based on your guest count, event duration, and whether alcohol is served. We use industry-standard charts to ensure adequate facilities.' }
   ];
+  
+  const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+  const averageRating = totalRating / reviews.length;
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": BUSINESS_INFO.name,
-    "image": `${SITE_URL}/#/logo.png`,
+    "image": "https://images.unsplash.com/photo-1582993847303-34676a1469e5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3",
     "logo": `${SITE_URL}/#/logo.png`,
     "@id": SITE_URL,
     "url": SITE_URL,
@@ -47,6 +52,21 @@ const HomePage: React.FC = () => {
       "opens": "00:00",
       "closes": "23:59"
     },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": averageRating.toFixed(1),
+        "reviewCount": reviews.length
+    },
+    "review": reviews.map(review => ({
+        "@type": "Review",
+        "author": {"@type": "Person", "name": review.name},
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review.rating,
+            "bestRating": "5"
+        },
+        "reviewBody": review.text
+    })),
     "makesOffer": allServices.map(s => ({
       "@type": "Offer",
       "itemOffered": {
@@ -78,12 +98,12 @@ const HomePage: React.FC = () => {
         title={`Porta Potty Rental in ${BUSINESS_INFO.city}, ${BUSINESS_INFO.state}`}
         description={`Your #1 source for reliable and affordable porta potty rentals in Mansfield, TX. We offer same-day delivery for construction sites, events, and more. Call ${BUSINESS_INFO.phone} today!`}
         path="/"
-        imageUrl="https://picsum.photos/seed/porta-potties-mansfield-texas-hero/1200/630"
+        imageUrl="https://images.unsplash.com/photo-1522201948163-54c81c6e9a74?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
       />
       <JsonLd schema={localBusinessSchema} />
 
       {/* Hero Section */}
-      <section className="bg-primary text-white bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(0, 82, 155, 0.8), rgba(0, 82, 155, 0.8)), url('https://picsum.photos/seed/mansfield-texas-skyline-wide/1920/1080')" }}>
+      <section className="bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Porta Potty Rental, Mansfield, TX</h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Fast, Clean, and Affordable Portable Restroom Solutions for Your Job Site or Special Event.</p>
@@ -199,8 +219,19 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       
-      {/* What is a porta potty */}
+      {/* Reviews Section */}
       <section className="py-20 bg-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">What Our Customers Say</h2>
+             <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">We pride ourselves on excellent service. Here's what our clients think.</p>
+          </div>
+          <ReviewsSlider reviews={reviews} />
+        </div>
+      </section>
+
+      {/* What is a porta potty */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-6">What is a Porta Potty?</h2>
            <p className="text-lg text-gray-700 mb-4">A porta potty, also known as a portable toilet or chemical toilet, is a self-contained, movable restroom facility that does not require connection to traditional plumbing or sewer systems. It uses a holding tank with special chemicals to break down waste and reduce odors. These units are essential for providing sanitation at construction sites, outdoor events, parks, and any location where permanent bathrooms are not available.</p>
@@ -215,7 +246,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Service Area Details */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-light">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                  <h2 className="text-3xl md:text-4xl font-bold text-primary">Mansfield Porta Potty Service Area Details</h2>
                  <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">We proudly serve all neighborhoods and ZIP codes within Mansfield, Texas, ensuring fast and reliable delivery across the city.</p>
@@ -231,7 +262,7 @@ const HomePage: React.FC = () => {
 
 
       {/* FAQ Section */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions</h2>
